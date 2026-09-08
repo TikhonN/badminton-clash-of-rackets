@@ -1,0 +1,23 @@
+{
+  "id": "2026-08-22",
+  "label": "August 22",
+  "date": "2026-08-22",
+  "venue": null,
+  "gamesPerPair": 11,
+  "pointsCap": 18,
+  "pairs": [
+    { "id": 1, "name": "Alla & Zhenya", "wins": 9, "points": 183 },
+    { "id": 2, "name": "Alexey K. & Maria", "wins": 7, "points": 188 },
+    { "id": 3, "name": "Taivi & Alain", "wins": 8, "points": 176 },
+    { "id": 4, "name": "Anton R. & Anna", "wins": 7, "points": 179 },
+    { "id": 5, "name": "Andre & Yulia T.", "wins": 8, "points": 193 },
+    { "id": 6, "name": "Andrey M. & Natasha T.", "wins": 5, "points": 175 },
+    { "id": 7, "name": "Zhanna & Vadim S.", "wins": 4, "points": 151 },
+    { "id": 8, "name": "Maksim K. & Irina K.", "wins": 1, "points": 130 },
+    { "id": 9, "name": "Annika & Gleb", "wins": 4, "points": 141 },
+    { "id": 10, "name": "David & Slava", "wins": 2, "points": 140 }
+  ],
+  "rounds": null,
+  "source": "Photographed scoresheets; per-round match scores were not provided for this day, only tournament totals. Names transliterated from the original Cyrillic scoresheets; ambiguous surnames kept as last initials/abbreviations as written.",
+  "notes": "The wins-ranked list's printed value for Andrey M. & Natasha T. (6) was corrected to 5, confirmed by both the win total (only sums to the correct 55 matches -- 10 pairs, 11 games each, /2 -- with 5) and by matching this pair's points total (175) to the id-ordered table; a legend photo provided afterward confirmed the pair-to-ID mapping used to make that correction. The original sheet recorded this day's pair 10 as 'Slava & David'; normalized here to 'David & Slava' to match how the same two people are named on August 29, so the site's automatic returning-pairs comparison recognizes them as the same team."
+}

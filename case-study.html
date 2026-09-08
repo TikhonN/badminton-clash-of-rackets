@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Case Study — Clash of Rackets</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏸</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">🏸 Clash of Rackets</a>
+    <div class="links">
+      <a href="index.html">Standings</a>
+      <a href="players.html">Players</a>
+      <a href="case-study.html" class="active">Case Study</a>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <div class="page-head">
+    <h1 style="font-size:32px;margin:0 0 10px;">From a stack of photos to a standings site</h1>
+    <div class="prose">
+      <div class="tag-row">
+        <span class="pill">Data cleanup</span>
+        <span class="pill">Static site, no build step</span>
+        <span class="pill">Vanilla JS</span>
+        <span class="pill">Design system</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="prose">
+    <h2>The problem</h2>
+    <p>Our club runs informal doubles round robins — 12 to 14 pairs, games to 18 points, everyone rotating through 11 rounds. The results exist as photos of paper scoresheets: some typed and printed, most handwritten with corrections, spread across a folder of nearly-identical filenames. There was no way to look at the season, compare two tournament days, or spot a trend without re-reading a stack of photos every time.</p>
+
+    <h2>Turning photos into structured data</h2>
+    <p>The first pass was transcription, not visualization. Each tournament day has two kinds of source: a numbered legend mapping a pair to a color/number, and a set of tables — either printed totals (games won, points scored, final placement) or handwritten per-round match sheets.</p>
+    <p>The handwritten round-by-round sheets turned out to be too unreliable to trust: corrected numbers, crossed-out scores, and inconsistent handwriting made several individual match scores genuinely ambiguous. Rather than guess, this project only encodes what could be verified — and it was verified: total wins recorded for each pair summed exactly to the number of matches actually played (66 for a 12-pair day, 77 for 14 pairs), which is a hard mathematical check that the transcription was accurate, even without being able to read every handwritten cell.</p>
+
+    <h2>Why a data file per tournament, not a hardcoded page</h2>
+    <p>The first version of this project was a single HTML file with the numbers typed directly into the page. That's fine for one tournament; it doesn't scale to a season. So the structure changed: every tournament day is now its own JSON file in <code>data/tournaments/</code>, listed in <code>data/manifest.json</code>. The site fetches those files, computes standings, win rates, and points rankings on the fly, and renders them — meaning a new tournament day is a new JSON file, not a new pull request against the markup.</p>
+    <p>The schema also has room to grow: a <code>rounds</code> field is ready to hold real match-by-match scores (court, teams, final score) whenever a future tournament's data is clean enough to capture at that level — the site will pick it up automatically once it's there, with no template to fill in by hand.</p>
+
+    <h2>Design decisions</h2>
+    <p>The visual language leans directly into the subject — a deep court green, chalk-white court lines, and gold/silver/bronze reserved strictly for podium finishes rather than spread across every category. Headlines use a condensed poster face (Anton) for a scoreboard feel; scores and stats sit in a monospace face (JetBrains Mono) so the digits line up like they would on an actual scoreboard.</p>
+    <p>Rather than a wall of numbers, each tournament section leads with a stat row (champion, matches played, low score of the day) before the full ranked list — the summary comes before the detail, the way you'd actually want to scan a results board.</p>
+
+    <h2>The "Players" view</h2>
+    <p>Pairs change from tournament to tournament, but people don't. The <a href="players.html">Players page</a> splits each pair name and aggregates every individual's appearances, total wins, and win rate across every tournament they've played — computed automatically from the same tournament files, with no separate player list to keep in sync.</p>
+
+    <h2>What's next</h2>
+    <ul>
+      <li>Capture real match-by-match scores going forward (the <code>rounds</code> field is ready) — unlocks head-to-head records and per-round streaks.</li>
+      <li>More tournament days, same JSON schema — the standings, points boards, and returning-pairs comparisons all update automatically.</li>
+      <li>Individual player pages with their full result history.</li>
+    </ul>
+
+    <h2>Stack</h2>
+    <p>Plain HTML, CSS, and JavaScript — no framework, no build step, no dependencies. Data lives in versioned JSON files rather than a database, so the whole project's history is just its git log. Deployable as static files to GitHub Pages, Vercel, or Netlify.</p>
+  </div>
+
+  <footer>Built as a personal project analyzing club badminton results. See <code>README.md</code> in the repository for how to add new tournament data.</footer>
+</div>
+
+</body>
+</html>

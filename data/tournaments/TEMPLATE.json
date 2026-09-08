@@ -1,0 +1,29 @@
+{
+  "_comment": "Copy this file into data/tournaments/, rename it to the tournament's id (e.g. 2026-10-03.json), fill it in, then add that id to data/manifest.json. Delete this _comment field — JSON has no real comments.",
+
+  "id": "YYYY-MM-DD",
+  "label": "Human-readable label shown on the site, e.g. 'October 3'",
+  "date": "YYYY-MM-DD",
+  "venue": null,
+  "gamesPerPair": 11,
+  "pointsCap": 18,
+
+  "pairs": [
+    { "id": 1, "name": "Player One & Player Two", "wins": 0, "points": null }
+  ],
+
+  "_rounds_comment": "Optional. If you have real per-round scores this time, fill in 'rounds' below and delete this field and the 'rounds': null line above it. Each match's team ids refer to a pair's 'id' above. If you don't have round data, leave 'rounds' as null — the site will just show tournament totals, same as August/September.",
+  "rounds": null,
+
+  "_rounds_example": [
+    {
+      "round": 1,
+      "matches": [
+        { "court": "C2", "teamA": 1, "teamB": 2, "scoreA": 18, "scoreB": 13 },
+        { "court": "C3", "teamA": 3, "teamB": 4, "scoreA": 13, "scoreB": 18 }
+      ]
+    }
+  ],
+
+  "source": "Optional note on where this data came from."
+}

@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Badminton: Clash of Rackets</title>
+<meta name="description" content="Badminton: Clash of Rackets — club badminton doubles results, leaderboards, and storylines across every tournament day.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🏸</text></svg>">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="wrap">
+    <a class="brand" href="index.html">🏸 Clash of Rackets</a>
+    <div class="links">
+      <a href="index.html" class="active">Standings</a>
+      <a href="players.html">Players</a>
+      <a href="case-study.html">Case Study</a>
+    </div>
+  </div>
+</nav>
+
+<div class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Club doubles &middot; round robin, games to 18</p>
+    <h1>Clash of Rackets</h1>
+    <p class="sub">Every tournament day, ranked and charted straight from the scoresheets.</p>
+    <div class="scoreboard" id="scoreboard"></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div id="events"></div>
+
+  <section class="section-block storylines" id="storylines-section" hidden>
+    <h2>Plot twists</h2>
+    <p class="sub">What changed between tournament days.</p>
+    <div class="cards" id="storyline-cards"></div>
+  </section>
+
+  <section class="section-block" id="returning-section" hidden>
+    <h2>Pairs who played more than once</h2>
+    <p class="sub">Same two names, same team — how their ranking moved from day to day.</p>
+    <div class="scroller">
+      <table class="rt">
+        <thead><tr><th>Pair</th><th>Results</th><th>Movement</th></tr></thead>
+        <tbody id="returning-body"></tbody>
+      </table>
+    </div>
+  </section>
+
+  <footer id="footer"></footer>
+</div>
+
+<script src="js/app.js"></script>
+<script>
+(async function () {
+  const tournaments = await loadTournaments();
+  const sorted = [...tournaments].sort((a, b) => a.id.localeCompare(b.id));
+
+  // Scoreboard: most recent (and second-most-recent, if any) champions.
+  const recent = sorted.slice(-2);
+  const sb = document.getElementById('scoreboard');
+  sb.style.gridTemplateColumns = recent.length === 2 ? '1fr auto 1fr' : '1fr';
+  recent.forEach((t, i) => {
+    const champ = standingsByWins(t)[0];
+    const align = recent.length === 2 && i === 1 ? 'text-align:right;' : '';
+    if (i === 1 && recent.length === 2) {
+      sb.insertAdjacentHTML('beforeend', `<div class="sb-vs">VS</div>`);
+    }
+    sb.insertAdjacentHTML('beforeend', `
+      <div class="sb-panel" style="${align}">
+        <p class="sb-date">${esc(t.label)} &middot; ${t.pairs.length} pairs</p>
+        <p class="sb-name">${esc(champ.name)}</p>
+        <p class="sb-meta"><span class="num">${champ.wins}–${t.gamesPerPair - champ.wins}</span>${champ.points != null ? ` &middot; ${champ.points} pts` : ''}</p>
+      </div>`);
+  });
+
+  // One section per tournament, newest first.
+  const eventsEl = document.getElementById('events');
+  [...sorted].reverse().forEach(t => {
+    const ranked = standingsByWins(t);
+    const champ = ranked[0];
+    const last = ranked[ranked.length - 1];
+    const totalMatches = Math.round((t.pairs.length / 2) * t.gamesPerPair);
+    const hasPoints = t.pairs.some(p => p.points != null);
+
+    const section = document.createElement('section');
+    section.className = 'event';
+    section.innerHTML = `
+      <div class="event-head">
+        <h2>${esc(t.label)}</h2>
+        <span class="tag">${t.gamesPerPair} games &middot; ${t.pairs.length} pairs &middot; ${totalMatches} matches played</span>
+      </div>
+      <div class="stat-row">
+        <div class="stat"><div class="v">${champ.wins}–${t.gamesPerPair - champ.wins}</div><div class="l">Champions — ${esc(champ.name)}</div></div>
+        <div class="stat"><div class="v">${totalMatches}</div><div class="l">Matches played across ${t.gamesPerPair} rounds</div></div>
+        <div class="stat"><div class="v">${last.wins}</div><div class="l">Win${last.wins === 1 ? '' : 's'} for the last-place pair, ${esc(last.name)}</div></div>
+        ${hasPoints
+          ? `<div class="stat"><div class="v">${standingsByPoints(t)[0].points}</div><div class="l">Top points total</div></div>`
+          : `<div class="stat"><div class="v">${Math.round((ranked[Math.floor(ranked.length/2)].wins / t.gamesPerPair) * 100)}%</div><div class="l">Median win rate</div></div>`
+        }
+      </div>
+      ${hasPoints ? `
+      <div class="boards">
+        <div><p class="board-label">Ranked by games won, out of ${t.gamesPerPair}</p><div class="board" data-board="wins-${t.id}"></div></div>
+        <div><p class="board-label">Ranked by total points scored</p><div class="board" data-board="points-${t.id}"></div></div>
+      </div>` : `
+      <p class="board-label">Ranked by games won, out of ${t.gamesPerPair}</p>
+      <div class="board" data-board="wins-${t.id}"></div>
+      `}
+    `;
+    eventsEl.appendChild(section);
+    renderWinsBoard(section.querySelector(`[data-board="wins-${t.id}"]`), ranked, t.gamesPerPair);
+    if (hasPoints) renderPointsBoard(section.querySelector(`[data-board="points-${t.id}"]`), standingsByPoints(t));
+  });
+
+  // Storylines (curated, from data/storylines.json).
+  try {
+    const stories = await fetch('data/storylines.json').then(r => r.json());
+    if (stories.length) {
+      document.getElementById('storylines-section').hidden = false;
+      document.getElementById('storyline-cards').innerHTML = stories.map(s => `
+        <div class="card">
+          <p class="kicker">${esc(s.kicker)}</p>
+          <h3>${esc(s.title)}</h3>
+          <p>${esc(s.body)}</p>
+          <span class="stat-chip">${esc(s.chip)}</span>
+        </div>`).join('');
+    }
+  } catch (e) { /* storylines are optional */ }
+
+  // Returning pairs, computed automatically.
+  const returning = returningPairs(tournaments);
+  if (returning.length) {
+    document.getElementById('returning-section').hidden = false;
+    document.getElementById('returning-body').innerHTML = returning.map(r => {
+      const first = r.apps[0], last = r.apps[r.apps.length - 1];
+      const improved = last.rank < first.rank, same = last.rank === first.rank;
+      const cls = same ? 'flat' : improved ? 'up' : 'down';
+      const arrow = same ? '→' : improved ? '▲' : '▼';
+      const resultsStr = r.apps.map(a => `${ordinal(a.rank)} of ${a.of} (${esc(a.label)})`).join(' &rarr; ');
+      return `<tr>
+        <td class="pair">${esc(r.name)}</td>
+        <td>${resultsStr}</td>
+        <td><span class="movement ${cls}">${arrow} ${same ? 'no change' : Math.abs(first.rank - last.rank) + (Math.abs(first.rank - last.rank) === 1 ? ' place' : ' places')}</span></td>
+      </tr>`;
+    }).join('');
+  }
+
+  document.getElementById('footer').innerHTML =
+    `Data comes from photographed scoresheets. Where per-round match scores weren't legible or recorded, this site shows tournament totals only — see the <a href="case-study.html">case study</a> for the full story, or <code>README.md</code> to add a new tournament day.`;
+})();
+</script>
+</body>
+</html>
