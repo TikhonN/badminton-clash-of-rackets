@@ -29,6 +29,7 @@
         <span class="pill">Static site, no build step</span>
         <span class="pill">Vanilla JS</span>
         <span class="pill">Design system</span>
+        <span class="pill">Anonymized data, fictional names</span>
       </div>
     </div>
   </div>
@@ -43,7 +44,12 @@
 
     <h2>Why a data file per tournament, not a hardcoded page</h2>
     <p>The first version of this project was a single HTML file with the numbers typed directly into the page. That's fine for one tournament; it doesn't scale to a season. So the structure changed: every tournament day is now its own JSON file in <code>data/tournaments/</code>, listed in <code>data/manifest.json</code>. The site fetches those files, computes standings, win rates, and points rankings on the fly, and renders them — meaning a new tournament day is a new JSON file, not a new pull request against the markup.</p>
-    <p>The schema also has room to grow: a <code>rounds</code> field is ready to hold real match-by-match scores (court, teams, final score) whenever a future tournament's data is clean enough to capture at that level — the site will pick it up automatically once it's there, with no template to fill in by hand.</p>
+    <p>The schema also had room to grow: a <code>rounds</code> field was built early to hold real match-by-match scores (court, teams, final score), ready for whenever a tournament's data was clean enough to capture at that level. That happened sooner than expected — see below.</p>
+
+    <h2>From three tournaments to a full season</h2>
+    <p>The site started with three tournament days, hand-transcribed from photos as described above. Later, a much larger export from the same club's own records became available: 19 tournaments from May through September, 1,485 individual matches, with real per-round scores for every one of them — not just day totals. That's the dataset the site runs on now.</p>
+    <p>The export anonymizes every player (<code>P001</code>…<code>P108</code>) and pair (<code>T01-01</code>, etc.) on purpose, with no id-to-name mapping included — a deliberate privacy choice by whoever prepared it, not an oversight. Since this site is a portfolio piece, not a tool the real club uses to look up real people, the fix was to assign a fictional Estonian name to each anonymized id and keep that mapping stable across the whole dataset: the same fictional person, in every tournament they "played." <strong>Every name shown anywhere on this site is a placeholder</strong> — the results, dates, scores, and standings math are real; the identities behind them are not.</p>
+    <p>Four of the 19 tournaments ran as two simultaneous, independent groups — e.g. twelve pairs on one set of courts and eight on another, playing to their own separate standings table at the same time. The source data was explicit that mixing those two groups into one ranked list would misrepresent results neither group actually produced. So the schema grew a <code>group</code> field per pair, and the standings math (<code>groupSlices()</code> in <code>js/app.js</code>) ranks each group independently — a grouped tournament renders as two separate sections on the standings page, each with its own champion, stat row, and full standings.</p>
 
     <h2>Design decisions</h2>
     <p>The visual language leans directly into the subject — a deep court green, chalk-white court lines, and gold/silver/bronze reserved strictly for podium finishes rather than spread across every category. Headlines use a condensed poster face (Anton) for a scoreboard feel; scores and stats sit in a monospace face (JetBrains Mono) so the digits line up like they would on an actual scoreboard.</p>
@@ -54,7 +60,7 @@
 
     <h2>What's next</h2>
     <ul>
-      <li>Capture real match-by-match scores going forward (the <code>rounds</code> field is ready) — unlocks head-to-head records and per-round streaks.</li>
+      <li>A match-log view: the <code>rounds</code> field now holds real per-round scores for every tournament, but nothing on the site renders it yet — it would unlock head-to-head records and per-round streaks.</li>
       <li>More tournament days, same JSON schema — the standings, points boards, and returning-pairs comparisons all update automatically.</li>
       <li>Individual player pages with their full result history.</li>
     </ul>
@@ -63,7 +69,10 @@
     <p>Plain HTML, CSS, and JavaScript — no framework, no build step, no dependencies. Data lives in versioned JSON files rather than a database, so the whole project's history is just its git log. Deployable as static files to GitHub Pages, Vercel, or Netlify.</p>
   </div>
 
-  <footer>Built as a personal project analyzing club badminton results. See <code>README.md</code> in the repository for how to add new tournament data.</footer>
+  <footer>
+    <p>Built as a personal project analyzing club badminton results. See <code>README.md</code> in the repository for how to add new tournament data.</p>
+    <p class="credit">A portfolio project by Natalia Tykhonravova, built with Claude Code. See the case study for the design and engineering decisions behind it.</p>
+  </footer>
 </div>
 
 </body>

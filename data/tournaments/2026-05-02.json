@@ -1,0 +1,982 @@
+{
+  "id": "2026-05-02",
+  "label": "May 2",
+  "date": "2026-05-02",
+  "venue": "Tallink",
+  "gamesPerPair": 11,
+  "pointsCap": 18,
+  "groups": [
+    "A",
+    "B"
+  ],
+  "pairs": [
+    {
+      "id": 1,
+      "name": "Helena Randmaa & Raivo Pikk",
+      "wins": 6,
+      "points": 172,
+      "group": "A"
+    },
+    {
+      "id": 2,
+      "name": "Jaanus Soo & Kaja Talvik",
+      "wins": 8,
+      "points": 183,
+      "group": "A"
+    },
+    {
+      "id": 3,
+      "name": "Tarmo Oja & Karin Uibo",
+      "wins": 2,
+      "points": 121,
+      "group": "A"
+    },
+    {
+      "id": 4,
+      "name": "Taavi Vares & Kristi Tuisk",
+      "wins": 5,
+      "points": 167,
+      "group": "A"
+    },
+    {
+      "id": 5,
+      "name": "Madis Toom & Katrin Aas",
+      "wins": 4,
+      "points": 161,
+      "group": "A"
+    },
+    {
+      "id": 6,
+      "name": "Kersti Koppel & Margus Lepik",
+      "wins": 7,
+      "points": 181,
+      "group": "A"
+    },
+    {
+      "id": 7,
+      "name": "Maarja Allik & Peeter Karu",
+      "wins": 9,
+      "points": 193,
+      "group": "A"
+    },
+    {
+      "id": 8,
+      "name": "Kadri Tamm & Erki Org",
+      "wins": 5,
+      "points": 169,
+      "group": "A"
+    },
+    {
+      "id": 9,
+      "name": "Piret Ilves & Merle Nurm",
+      "wins": 7,
+      "points": 169,
+      "group": "A"
+    },
+    {
+      "id": 10,
+      "name": "Toomas Saar & Indrek Vaher",
+      "wins": 4,
+      "points": 166,
+      "group": "A"
+    },
+    {
+      "id": 11,
+      "name": "Liina Nõmm & Andres Mägi",
+      "wins": 7,
+      "points": 173,
+      "group": "A"
+    },
+    {
+      "id": 12,
+      "name": "Signe Pärnoja & Urmas Raudsepp",
+      "wins": 2,
+      "points": 148,
+      "group": "A"
+    },
+    {
+      "id": 13,
+      "name": "Rein Pärn & Meelis Mänd",
+      "wins": 4,
+      "points": 159,
+      "group": "B"
+    },
+    {
+      "id": 14,
+      "name": "Marta Kask & Marko Väli",
+      "wins": 8,
+      "points": 178,
+      "group": "B"
+    },
+    {
+      "id": 15,
+      "name": "Liis Sepp & Karl Kotkas",
+      "wins": 10,
+      "points": 195,
+      "group": "B"
+    },
+    {
+      "id": 16,
+      "name": "Aivar Kallas & Reet Kivi",
+      "wins": 2,
+      "points": 151,
+      "group": "B"
+    },
+    {
+      "id": 17,
+      "name": "Priit Kuusk & Eva Lind",
+      "wins": 6,
+      "points": 168,
+      "group": "B"
+    },
+    {
+      "id": 18,
+      "name": "Anu Rebane & Ants Mets",
+      "wins": 9,
+      "points": 195,
+      "group": "B"
+    },
+    {
+      "id": 19,
+      "name": "Merike Metsalu & Anneli Laur",
+      "wins": 3,
+      "points": 157,
+      "group": "B"
+    },
+    {
+      "id": 20,
+      "name": "Kristjan Roos & Triin Sild",
+      "wins": 2,
+      "points": 140,
+      "group": "B"
+    }
+  ],
+  "rounds": [
+    {
+      "round": 1,
+      "matches": [
+        {
+          "court": "C1",
+          "teamA": 1,
+          "teamB": 2,
+          "scoreA": 14,
+          "scoreB": 18
+        },
+        {
+          "court": "C10",
+          "teamA": 17,
+          "teamB": 16,
+          "scoreA": 18,
+          "scoreB": 9
+        },
+        {
+          "court": "C2",
+          "teamA": 3,
+          "teamB": 4,
+          "scoreA": 18,
+          "scoreB": 7
+        },
+        {
+          "court": "C3",
+          "teamA": 5,
+          "teamB": 6,
+          "scoreA": 17,
+          "scoreB": 18
+        },
+        {
+          "court": "C4",
+          "teamA": 7,
+          "teamB": 8,
+          "scoreA": 18,
+          "scoreB": 7
+        },
+        {
+          "court": "C5",
+          "teamA": 9,
+          "teamB": 10,
+          "scoreA": 18,
+          "scoreB": 10
+        },
+        {
+          "court": "C6",
+          "teamA": 11,
+          "teamB": 12,
+          "scoreA": 18,
+          "scoreB": 10
+        },
+        {
+          "court": "C7",
+          "teamA": 13,
+          "teamB": 20,
+          "scoreA": 18,
+          "scoreB": 14
+        },
+        {
+          "court": "C8",
+          "teamA": 14,
+          "teamB": 19,
+          "scoreA": 18,
+          "scoreB": 13
+        },
+        {
+          "court": "C9",
+          "teamA": 15,
+          "teamB": 18,
+          "scoreA": 18,
+          "scoreB": 17
+        }
+      ]
+    },
+    {
+      "round": 2,
+      "matches": [
+        {
+          "court": "C1",
+          "teamA": 1,
+          "teamB": 4,
+          "scoreA": 11,
+          "scoreB": 18
+        },
+        {
+          "court": "C10",
+          "teamA": 18,
+          "teamB": 20,
+          "scoreA": 18,
+          "scoreB": 8
+        },
+        {
+          "court": "C2",
+          "teamA": 3,
+          "teamB": 6,
+          "scoreA": 9,
+          "scoreB": 18
+        },
+        {
+          "court": "C3",
+          "teamA": 5,
+          "teamB": 8,
+          "scoreA": 10,
+          "scoreB": 18
+        },
+        {
+          "court": "C4",
+          "teamA": 7,
+          "teamB": 10,
+          "scoreA": 18,
+          "scoreB": 14
+        },
+        {
+          "court": "C5",
+          "teamA": 9,
+          "teamB": 12,
+          "scoreA": 18,
+          "scoreB": 13
+        },
+        {
+          "court": "C6",
+          "teamA": 11,
+          "teamB": 2,
+          "scoreA": 13,
+          "scoreB": 18
+        },
+        {
+          "court": "C7",
+          "teamA": 13,
+          "teamB": 19,
+          "scoreA": 12,
+          "scoreB": 18
+        },
+        {
+          "court": "C8",
+          "teamA": 15,
+          "teamB": 16,
+          "scoreA": 18,
+          "scoreB": 14
+        },
+        {
+          "court": "C9",
+          "teamA": 17,
+          "teamB": 14,
+          "scoreA": 13,
+          "scoreB": 18
+        }
+      ]
+    },
+    {
+      "round": 3,
+      "matches": [
+        {
+          "court": "C1",
+          "teamA": 1,
+          "teamB": 6,
+          "scoreA": 17,
+          "scoreB": 18
+        },
+        {
+          "court": "C10",
+          "teamA": 19,
+          "teamB": 17,
+          "scoreA": 18,
+          "scoreB": 13
+        },
+        {
+          "court": "C2",
+          "teamA": 3,
+          "teamB": 8,
+          "scoreA": 4,
+          "scoreB": 18
+        },
+        {
+          "court": "C3",
+          "teamA": 5,
+          "teamB": 10,
+          "scoreA": 18,
+          "scoreB": 13
+        },
+        {
+          "court": "C4",
+          "teamA": 7,
+          "teamB": 12,
+          "scoreA": 18,
+          "scoreB": 6
+        },
+        {
+          "court": "C5",
+          "teamA": 9,
+          "teamB": 2,
+          "scoreA": 7,
+          "scoreB": 18
+        },
+        {
+          "court": "C6",
+          "teamA": 11,
+          "teamB": 4,
+          "scoreA": 8,
+          "scoreB": 18
+        },
+        {
+          "court": "C7",
+          "teamA": 13,
+          "teamB": 18,
+          "scoreA": 14,
+          "scoreB": 18
+        },
+        {
+          "court": "C8",
+          "teamA": 16,
+          "teamB": 20,
+          "scoreA": 13,
+          "scoreB": 18
+        },
+        {
+          "court": "C9",
+          "teamA": 14,
+          "teamB": 15,
+          "scoreA": 14,
+          "scoreB": 18
+        }
+      ]
+    },
+    {
+      "round": 4,
+      "matches": [
+        {
+          "court": "C1",
+          "teamA": 1,
+          "teamB": 8,
+          "scoreA": 18,
+          "scoreB": 11
+        },
+        {
+          "court": "C10",
+          "teamA": 19,
+          "teamB": 15,
+          "scoreA": 14,
+          "scoreB": 18
+        },
+        {
+          "court": "C2",
+          "teamA": 3,
+          "teamB": 10,
+          "scoreA": 10,
+          "scoreB": 18
+        },
+        {
+          "court": "C3",
+          "teamA": 5,
+          "teamB": 12,
+          "scoreA": 18,
+          "scoreB": 13
+        },
+        {
+          "court": "C4",
+          "teamA": 7,
+          "teamB": 2,
+          "scoreA": 18,
+          "scoreB": 11
+        },
+        {
+          "court": "C5",
+          "teamA": 9,
+          "teamB": 4,
+          "scoreA": 18,
+          "scoreB": 15
+        },
+        {
+          "court": "C6",
+          "teamA": 11,
+          "teamB": 6,
+          "scoreA": 18,
+          "scoreB": 17
+        },
+        {
+          "court": "C7",
+          "teamA": 13,
+          "teamB": 17,
+          "scoreA": 14,
+          "scoreB": 18
+        },
+        {
+          "court": "C8",
+          "teamA": 14,
+          "teamB": 20,
+          "scoreA": 18,
+          "scoreB": 13
+        },
+        {
+          "court": "C9",
+          "teamA": 16,
+          "teamB": 18,
+          "scoreA": 10,
+          "scoreB": 18
+        }
+      ]
+    },
+    {
+      "round": 5,
+      "matches": [
+        {
+          "court": "C1",
+          "teamA": 1,
+          "teamB": 10,
+          "scoreA": 18,
+          "scoreB": 14
+        },
+        {
+          "court": "C10",
+          "teamA": 19,
+          "teamB": 20,
+          "scoreA": 13,
+          "scoreB": 18
+        },
+        {
+          "court": "C2",
+          "teamA": 3,
+          "teamB": 12,
+          "scoreA": 18,
+          "scoreB": 16
+        },
+        {
+          "court": "C3",
+          "teamA": 5,
+          "teamB": 2,
+          "scoreA": 18,
+          "scoreB": 14
+        },
+        {
+          "court": "C4",
+          "teamA": 7,
+          "teamB": 4,
+          "scoreA": 18,
+          "scoreB": 12
+        },
+        {
+          "court": "C5",
+          "teamA": 9,
+          "teamB": 6,
+          "scoreA": 18,
+          "scoreB": 16
+        },
+        {
+          "court": "C6",
+          "teamA": 11,
+          "teamB": 8,
+          "scoreA": 18,
+          "scoreB": 15
+        },
+        {
+          "court": "C7",
+          "teamA": 13,
+          "teamB": 16,
+          "scoreA": 18,
+          "scoreB": 14
+        },
+        {
+          "court": "C8",
+          "teamA": 15,
+          "teamB": 17,
+          "scoreA": 18,
+          "scoreB": 10
+        },
+        {
+          "court": "C9",
+          "teamA": 18,
+          "teamB": 14,
+          "scoreA": 18,
+          "scoreB": 12
+        }
+      ]
+    },
+    {
+      "round": 6,
+      "matches": [
+        {
+          "court": "C1",
+          "teamA": 1,
+          "teamB": 12,
+          "scoreA": 14,
+          "scoreB": 18
+        },
+        {
+          "court": "C10",
+          "teamA": 19,
+          "teamB": 18,
+          "scoreA": 14,
+          "scoreB": 18
+        },
+        {
+          "court": "C2",
+          "teamA": 3,
+          "teamB": 2,
+          "scoreA": 5,
+          "scoreB": 18
+        },
+        {
+          "court": "C3",
+          "teamA": 5,
+          "teamB": 4,
+          "scoreA": 16,
+          "scoreB": 18
+        },
+        {
+          "court": "C4",
+          "teamA": 7,
+          "teamB": 6,
+          "scoreA": 17,
+          "scoreB": 18
+        },
+        {
+          "court": "C5",
+          "teamA": 9,
+          "teamB": 8,
+          "scoreA": 18,
+          "scoreB": 14
+        },
+        {
+          "court": "C6",
+          "teamA": 11,
+          "teamB": 10,
+          "scoreA": 17,
+          "scoreB": 18
+        },
+        {
+          "court": "C7",
+          "teamA": 13,
+          "teamB": 15,
+          "scoreA": 14,
+          "scoreB": 18
+        },
+        {
+          "court": "C8",
+          "teamA": 16,
+          "teamB": 14,
+          "scoreA": 18,
+          "scoreB": 8
+        },
+        {
+          "court": "C9",
+          "teamA": 17,
+          "teamB": 20,
+          "scoreA": 18,
+          "scoreB": 11
+        }
+      ]
+    },
+    {
+      "round": 7,
+      "matches": [
+        {
+          "court": "C1",
+          "teamA": 1,
+          "teamB": 3,
+          "scoreA": 18,
+          "scoreB": 12
+        },
+        {
+          "court": "C10",
+          "teamA": 17,
+          "teamB": 18,
+          "scoreA": 16,
+          "scoreB": 18
+        },
+        {
+          "court": "C2",
+          "teamA": 2,
+          "teamB": 4,
+          "scoreA": 18,
+          "scoreB": 17
+        },
+        {
+          "court": "C3",
+          "teamA": 5,
+          "teamB": 7,
+          "scoreA": 13,
+          "scoreB": 18
+        },
+        {
+          "court": "C4",
+          "teamA": 6,
+          "teamB": 8,
+          "scoreA": 18,
+          "scoreB": 15
+        },
+        {
+          "court": "C5",
+          "teamA": 9,
+          "teamB": 11,
+          "scoreA": 14,
+          "scoreB": 18
+        },
+        {
+          "court": "C6",
+          "teamA": 10,
+          "teamB": 12,
+          "scoreA": 18,
+          "scoreB": 17
+        },
+        {
+          "court": "C7",
+          "teamA": 13,
+          "teamB": 14,
+          "scoreA": 13,
+          "scoreB": 18
+        },
+        {
+          "court": "C8",
+          "teamA": 15,
+          "teamB": 20,
+          "scoreA": 18,
+          "scoreB": 16
+        },
+        {
+          "court": "C9",
+          "teamA": 16,
+          "teamB": 19,
+          "scoreA": 17,
+          "scoreB": 18
+        }
+      ]
+    },
+    {
+      "round": 8,
+      "matches": [
+        {
+          "court": "C1",
+          "teamA": 1,
+          "teamB": 5,
+          "scoreA": 18,
+          "scoreB": 13
+        },
+        {
+          "court": "C10",
+          "teamA": 16,
+          "teamB": 17,
+          "scoreA": 14,
+          "scoreB": 18
+        },
+        {
+          "court": "C2",
+          "teamA": 2,
+          "teamB": 6,
+          "scoreA": 14,
+          "scoreB": 18
+        },
+        {
+          "court": "C3",
+          "teamA": 3,
+          "teamB": 9,
+          "scoreA": 17,
+          "scoreB": 18
+        },
+        {
+          "court": "C4",
+          "teamA": 4,
+          "teamB": 10,
+          "scoreA": 16,
+          "scoreB": 18
+        },
+        {
+          "court": "C5",
+          "teamA": 7,
+          "teamB": 11,
+          "scoreA": 18,
+          "scoreB": 9
+        },
+        {
+          "court": "C6",
+          "teamA": 8,
+          "teamB": 12,
+          "scoreA": 18,
+          "scoreB": 11
+        },
+        {
+          "court": "C7",
+          "teamA": 13,
+          "teamB": 20,
+          "scoreA": 18,
+          "scoreB": 11
+        },
+        {
+          "court": "C8",
+          "teamA": 14,
+          "teamB": 19,
+          "scoreA": 18,
+          "scoreB": 12
+        },
+        {
+          "court": "C9",
+          "teamA": 15,
+          "teamB": 18,
+          "scoreA": 18,
+          "scoreB": 16
+        }
+      ]
+    },
+    {
+      "round": 9,
+      "matches": [
+        {
+          "court": "C1",
+          "teamA": 1,
+          "teamB": 7,
+          "scoreA": 18,
+          "scoreB": 14
+        },
+        {
+          "court": "C10",
+          "teamA": 15,
+          "teamB": 16,
+          "scoreA": 18,
+          "scoreB": 12
+        },
+        {
+          "court": "C2",
+          "teamA": 2,
+          "teamB": 8,
+          "scoreA": 18,
+          "scoreB": 17
+        },
+        {
+          "court": "C3",
+          "teamA": 3,
+          "teamB": 11,
+          "scoreA": 12,
+          "scoreB": 18
+        },
+        {
+          "court": "C4",
+          "teamA": 4,
+          "teamB": 12,
+          "scoreA": 18,
+          "scoreB": 16
+        },
+        {
+          "court": "C5",
+          "teamA": 5,
+          "teamB": 9,
+          "scoreA": 12,
+          "scoreB": 18
+        },
+        {
+          "court": "C6",
+          "teamA": 6,
+          "teamB": 10,
+          "scoreA": 18,
+          "scoreB": 15
+        },
+        {
+          "court": "C7",
+          "teamA": 13,
+          "teamB": 19,
+          "scoreA": 18,
+          "scoreB": 13
+        },
+        {
+          "court": "C8",
+          "teamA": 20,
+          "teamB": 18,
+          "scoreA": 6,
+          "scoreB": 18
+        },
+        {
+          "court": "C9",
+          "teamA": 14,
+          "teamB": 17,
+          "scoreA": 18,
+          "scoreB": 8
+        }
+      ]
+    },
+    {
+      "round": 10,
+      "matches": [
+        {
+          "court": "C1",
+          "teamA": 1,
+          "teamB": 9,
+          "scoreA": 18,
+          "scoreB": 14
+        },
+        {
+          "court": "C10",
+          "teamA": 14,
+          "teamB": 15,
+          "scoreA": 18,
+          "scoreB": 15
+        },
+        {
+          "court": "C2",
+          "teamA": 2,
+          "teamB": 10,
+          "scoreA": 18,
+          "scoreB": 17
+        },
+        {
+          "court": "C3",
+          "teamA": 3,
+          "teamB": 7,
+          "scoreA": 5,
+          "scoreB": 18
+        },
+        {
+          "court": "C4",
+          "teamA": 4,
+          "teamB": 8,
+          "scoreA": 10,
+          "scoreB": 18
+        },
+        {
+          "court": "C5",
+          "teamA": 5,
+          "teamB": 11,
+          "scoreA": 8,
+          "scoreB": 18
+        },
+        {
+          "court": "C6",
+          "teamA": 6,
+          "teamB": 12,
+          "scoreA": 12,
+          "scoreB": 18
+        },
+        {
+          "court": "C7",
+          "teamA": 13,
+          "teamB": 18,
+          "scoreA": 10,
+          "scoreB": 18
+        },
+        {
+          "court": "C8",
+          "teamA": 17,
+          "teamB": 19,
+          "scoreA": 18,
+          "scoreB": 11
+        },
+        {
+          "court": "C9",
+          "teamA": 16,
+          "teamB": 20,
+          "scoreA": 18,
+          "scoreB": 16
+        }
+      ]
+    },
+    {
+      "round": 11,
+      "matches": [
+        {
+          "court": "C1",
+          "teamA": 1,
+          "teamB": 11,
+          "scoreA": 8,
+          "scoreB": 18
+        },
+        {
+          "court": "C10",
+          "teamA": 14,
+          "teamB": 20,
+          "scoreA": 18,
+          "scoreB": 9
+        },
+        {
+          "court": "C2",
+          "teamA": 2,
+          "teamB": 12,
+          "scoreA": 18,
+          "scoreB": 10
+        },
+        {
+          "court": "C3",
+          "teamA": 3,
+          "teamB": 5,
+          "scoreA": 11,
+          "scoreB": 18
+        },
+        {
+          "court": "C4",
+          "teamA": 4,
+          "teamB": 6,
+          "scoreA": 18,
+          "scoreB": 10
+        },
+        {
+          "court": "C5",
+          "teamA": 7,
+          "teamB": 9,
+          "scoreA": 18,
+          "scoreB": 8
+        },
+        {
+          "court": "C6",
+          "teamA": 8,
+          "teamB": 10,
+          "scoreA": 18,
+          "scoreB": 11
+        },
+        {
+          "court": "C7",
+          "teamA": 13,
+          "teamB": 17,
+          "scoreA": 10,
+          "scoreB": 18
+        },
+        {
+          "court": "C8",
+          "teamA": 16,
+          "teamB": 18,
+          "scoreA": 12,
+          "scoreB": 18
+        },
+        {
+          "court": "C9",
+          "teamA": 15,
+          "teamB": 19,
+          "scoreA": 18,
+          "scoreB": 13
+        }
+      ]
+    }
+  ],
+  "source": "Adapted from an anonymized export of the Aliris badminton club (Tallinn); player names are fictional placeholders assigned for portfolio display, not real people — see the case study for how this dataset was built."
+}

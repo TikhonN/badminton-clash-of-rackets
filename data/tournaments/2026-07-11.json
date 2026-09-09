@@ -1,7 +1,7 @@
 {
-  "id": "2026-08-22",
-  "label": "August 22",
-  "date": "2026-08-22",
+  "id": "2026-07-11",
+  "label": "July 11",
+  "date": "2026-07-11",
   "venue": "Tallink",
   "gamesPerPair": 11,
   "pointsCap": 18,
@@ -9,72 +9,72 @@
   "pairs": [
     {
       "id": 1,
-      "name": "Merle Nurm & Helle Niit",
-      "wins": 9,
+      "name": "Madis Toom & Katrin Aas",
+      "wins": 7,
       "points": 183,
       "group": null
     },
     {
       "id": 2,
-      "name": "Sirje Saar & Rasmus Post",
-      "wins": 7,
-      "points": 188,
+      "name": "Kadri Tamm & Indrek Vaher",
+      "wins": 10,
+      "points": 185,
       "group": null
     },
     {
       "id": 3,
-      "name": "Marta Kask & Marko Väli",
-      "wins": 8,
-      "points": 176,
+      "name": "Merle Nurm & Piret Ilves",
+      "wins": 9,
+      "points": 182,
       "group": null
     },
     {
       "id": 4,
-      "name": "Argo Haan & Malle Jõe",
+      "name": "Kristi Tuisk & Tarmo Oja",
       "wins": 7,
-      "points": 179,
+      "points": 163,
       "group": null
     },
     {
       "id": 5,
-      "name": "Kadri Tamm & Indrek Vaher",
-      "wins": 8,
-      "points": 193,
+      "name": "Marko Väli & Marta Kask",
+      "wins": 7,
+      "points": 176,
       "group": null
     },
     {
       "id": 6,
-      "name": "Rando Rauk & Astrid Loik",
-      "wins": 5,
-      "points": 175,
+      "name": "Kaido Süld & Krista Solg",
+      "wins": 4,
+      "points": 167,
       "group": null
     },
     {
       "id": 7,
-      "name": "Ene Kruus & Krista Solg",
-      "wins": 4,
-      "points": 151,
+      "name": "Aivar Kallas & Made Ait",
+      "wins": 1,
+      "points": 139,
       "group": null
     },
     {
       "id": 8,
-      "name": "Georg Rebane & Anu Rebane",
-      "wins": 1,
-      "points": 129,
+      "name": "Toivi Tuum & Ester Lume",
+      "wins": 2,
+      "points": 111,
       "group": null
     },
     {
       "id": 9,
-      "name": "Aare Jaak & Vello Haav",
-      "wins": 4,
-      "points": 141,
+      "name": "Anni Ust & Andres Mägi",
+      "wins": 7,
+      "points": 177,
       "group": null
     },
     {
       "id": 10,
-      "name": "Ester Lume & Helena Randmaa",
-      "wins": 2,
-      "points": 140,
+      "name": "Mart Loot & Malle Jõe",
+      "wins": 1,
+      "points": 113,
       "group": null
     }
   ],
@@ -87,7 +87,7 @@
           "teamA": 3,
           "teamB": 4,
           "scoreA": 18,
-          "scoreB": 16
+          "scoreB": 8
         },
         {
           "court": "C3",
@@ -101,21 +101,21 @@
           "teamA": 5,
           "teamB": 8,
           "scoreA": 18,
-          "scoreB": 9
+          "scoreB": 12
         },
         {
           "court": "C5",
           "teamA": 9,
           "teamB": 10,
           "scoreA": 18,
-          "scoreB": 10
+          "scoreB": 7
         },
         {
           "court": "C6",
           "teamA": 1,
           "teamB": 2,
-          "scoreA": 18,
-          "scoreB": 15
+          "scoreA": 13,
+          "scoreB": 18
         }
       ]
     },
@@ -127,35 +127,35 @@
           "teamA": 3,
           "teamB": 6,
           "scoreA": 18,
-          "scoreB": 9
+          "scoreB": 12
         },
         {
           "court": "C3",
           "teamA": 5,
           "teamB": 8,
           "scoreA": 18,
-          "scoreB": 11
+          "scoreB": 2
         },
         {
           "court": "C4",
           "teamA": 7,
           "teamB": 10,
-          "scoreA": 18,
-          "scoreB": 16
-        },
-        {
-          "court": "C5",
-          "teamA": 9,
-          "teamB": 2,
-          "scoreA": 7,
+          "scoreA": 15,
           "scoreB": 18
         },
         {
-          "court": "C6",
+          "court": "C5",
           "teamA": 1,
           "teamB": 4,
           "scoreA": 18,
-          "scoreB": 13
+          "scoreB": 9
+        },
+        {
+          "court": "C6",
+          "teamA": 9,
+          "teamB": 2,
+          "scoreA": 9,
+          "scoreB": 18
         }
       ]
     },
@@ -167,35 +167,35 @@
           "teamA": 3,
           "teamB": 8,
           "scoreA": 18,
-          "scoreB": 16
+          "scoreB": 8
         },
         {
           "court": "C3",
           "teamA": 5,
           "teamB": 10,
           "scoreA": 18,
-          "scoreB": 15
+          "scoreB": 11
         },
         {
           "court": "C4",
           "teamA": 7,
           "teamB": 4,
-          "scoreA": 15,
+          "scoreA": 11,
           "scoreB": 18
         },
         {
           "court": "C5",
           "teamA": 9,
           "teamB": 2,
-          "scoreA": 10,
-          "scoreB": 18
+          "scoreA": 18,
+          "scoreB": 5
         },
         {
           "court": "C6",
           "teamA": 1,
           "teamB": 6,
           "scoreA": 18,
-          "scoreB": 17
+          "scoreB": 14
         }
       ]
     },
@@ -207,27 +207,27 @@
           "teamA": 3,
           "teamB": 10,
           "scoreA": 18,
-          "scoreB": 9
+          "scoreB": 12
         },
         {
           "court": "C3",
           "teamA": 5,
           "teamB": 6,
-          "scoreA": 15,
-          "scoreB": 18
+          "scoreA": 18,
+          "scoreB": 14
         },
         {
           "court": "C4",
           "teamA": 7,
           "teamB": 2,
-          "scoreA": 10,
+          "scoreA": 14,
           "scoreB": 18
         },
         {
           "court": "C5",
           "teamA": 9,
           "teamB": 4,
-          "scoreA": 9,
+          "scoreA": 17,
           "scoreB": 18
         },
         {
@@ -235,7 +235,7 @@
           "teamA": 1,
           "teamB": 8,
           "scoreA": 18,
-          "scoreB": 11
+          "scoreB": 6
         }
       ]
     },
@@ -247,35 +247,35 @@
           "teamA": 3,
           "teamB": 8,
           "scoreA": 18,
-          "scoreB": 6
+          "scoreB": 9
         },
         {
           "court": "C3",
           "teamA": 5,
           "teamB": 2,
-          "scoreA": 17,
+          "scoreA": 12,
           "scoreB": 18
         },
         {
           "court": "C4",
           "teamA": 7,
           "teamB": 4,
-          "scoreA": 8,
+          "scoreA": 12,
           "scoreB": 18
         },
         {
           "court": "C5",
           "teamA": 9,
           "teamB": 6,
-          "scoreA": 18,
-          "scoreB": 10
+          "scoreA": 15,
+          "scoreB": 18
         },
         {
           "court": "C6",
           "teamA": 1,
           "teamB": 10,
           "scoreA": 18,
-          "scoreB": 12
+          "scoreB": 8
         }
       ]
     },
@@ -286,36 +286,36 @@
           "court": "C2",
           "teamA": 3,
           "teamB": 2,
-          "scoreA": 18,
-          "scoreB": 16
+          "scoreA": 9,
+          "scoreB": 18
         },
         {
           "court": "C3",
           "teamA": 5,
           "teamB": 4,
-          "scoreA": 18,
-          "scoreB": 13
+          "scoreA": 16,
+          "scoreB": 18
         },
         {
           "court": "C4",
           "teamA": 7,
           "teamB": 6,
           "scoreA": 18,
-          "scoreB": 17
+          "scoreB": 11
         },
         {
           "court": "C5",
           "teamA": 9,
           "teamB": 8,
-          "scoreA": 16,
-          "scoreB": 18
+          "scoreA": 18,
+          "scoreB": 6
         },
         {
           "court": "C6",
           "teamA": 1,
           "teamB": 10,
           "scoreA": 18,
-          "scoreB": 10
+          "scoreB": 8
         }
       ]
     },
@@ -326,36 +326,36 @@
           "court": "C2",
           "teamA": 1,
           "teamB": 3,
-          "scoreA": 18,
-          "scoreB": 15
+          "scoreA": 16,
+          "scoreB": 18
         },
         {
           "court": "C3",
           "teamA": 5,
           "teamB": 7,
           "scoreA": 18,
-          "scoreB": 10
+          "scoreB": 12
         },
         {
           "court": "C4",
           "teamA": 6,
           "teamB": 8,
           "scoreA": 18,
-          "scoreB": 10
+          "scoreB": 11
         },
         {
           "court": "C5",
           "teamA": 9,
           "teamB": 10,
           "scoreA": 18,
-          "scoreB": 10
+          "scoreB": 11
         },
         {
           "court": "C6",
           "teamA": 2,
           "teamB": 4,
           "scoreA": 18,
-          "scoreB": 11
+          "scoreB": 12
         }
       ]
     },
@@ -366,36 +366,36 @@
           "court": "C2",
           "teamA": 1,
           "teamB": 5,
-          "scoreA": 9,
-          "scoreB": 18
+          "scoreA": 18,
+          "scoreB": 11
         },
         {
           "court": "C3",
           "teamA": 3,
           "teamB": 9,
           "scoreA": 18,
-          "scoreB": 5
+          "scoreB": 10
         },
         {
           "court": "C4",
           "teamA": 4,
           "teamB": 10,
           "scoreA": 18,
-          "scoreB": 12
+          "scoreB": 9
         },
         {
           "court": "C5",
           "teamA": 7,
           "teamB": 8,
-          "scoreA": 18,
-          "scoreB": 10
+          "scoreA": 16,
+          "scoreB": 18
         },
         {
           "court": "C6",
           "teamA": 2,
           "teamB": 6,
-          "scoreA": 15,
-          "scoreB": 18
+          "scoreA": 18,
+          "scoreB": 16
         }
       ]
     },
@@ -407,35 +407,35 @@
           "teamA": 1,
           "teamB": 7,
           "scoreA": 18,
-          "scoreB": 15
+          "scoreB": 10
         },
         {
           "court": "C3",
           "teamA": 3,
           "teamB": 4,
-          "scoreA": 8,
-          "scoreB": 18
+          "scoreA": 18,
+          "scoreB": 8
         },
         {
           "court": "C4",
           "teamA": 5,
           "teamB": 9,
-          "scoreA": 18,
-          "scoreB": 14
+          "scoreA": 11,
+          "scoreB": 18
         },
         {
           "court": "C5",
           "teamA": 6,
           "teamB": 10,
-          "scoreA": 17,
-          "scoreB": 18
+          "scoreA": 18,
+          "scoreB": 15
         },
         {
           "court": "C6",
           "teamA": 2,
           "teamB": 8,
           "scoreA": 18,
-          "scoreB": 11
+          "scoreB": 7
         }
       ]
     },
@@ -446,7 +446,7 @@
           "court": "C2",
           "teamA": 1,
           "teamB": 9,
-          "scoreA": 12,
+          "scoreA": 16,
           "scoreB": 18
         },
         {
@@ -454,28 +454,28 @@
           "teamA": 2,
           "teamB": 10,
           "scoreA": 18,
-          "scoreB": 10
+          "scoreB": 6
         },
         {
           "court": "C4",
           "teamA": 4,
           "teamB": 8,
           "scoreA": 18,
-          "scoreB": 12
+          "scoreB": 14
         },
         {
           "court": "C5",
           "teamA": 5,
           "teamB": 6,
-          "scoreA": 17,
-          "scoreB": 18
+          "scoreA": 18,
+          "scoreB": 14
         },
         {
           "court": "C6",
           "teamA": 3,
           "teamB": 7,
           "scoreA": 18,
-          "scoreB": 10
+          "scoreB": 9
         }
       ]
     },
@@ -487,34 +487,34 @@
           "teamA": 4,
           "teamB": 6,
           "scoreA": 18,
-          "scoreB": 15
+          "scoreB": 14
         },
         {
           "court": "C3",
           "teamA": 1,
           "teamB": 2,
-          "scoreA": 18,
-          "scoreB": 16
+          "scoreA": 12,
+          "scoreB": 18
         },
         {
           "court": "C4",
           "teamA": 7,
           "teamB": 9,
-          "scoreA": 18,
-          "scoreB": 8
+          "scoreA": 11,
+          "scoreB": 18
         },
         {
           "court": "C5",
           "teamA": 8,
           "teamB": 10,
-          "scoreA": 15,
-          "scoreB": 18
+          "scoreA": 18,
+          "scoreB": 8
         },
         {
           "court": "C6",
           "teamA": 3,
           "teamB": 5,
-          "scoreA": 9,
+          "scoreA": 11,
           "scoreB": 18
         }
       ]

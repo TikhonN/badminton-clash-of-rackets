@@ -32,6 +32,30 @@
     <p class="sub">Every individual, aggregated across every tournament day. Pair names in the format "A &amp; B" are split into individuals automatically — see the <a href="case-study.html">case study</a> for how the data's put together.</p>
   </div>
 
+  <section class="mini-leaderboards" id="leaderboards">
+    <div class="mini-board">
+      <p class="board-label">Most appearances</p>
+      <ol class="mini-list" id="lb-appearances"></ol>
+    </div>
+    <div class="mini-board">
+      <p class="board-label">Most total wins</p>
+      <ol class="mini-list" id="lb-wins"></ol>
+    </div>
+    <div class="mini-board">
+      <p class="board-label">Best win rate <span class="board-note">min. 5 appearances</span></p>
+      <ol class="mini-list" id="lb-winrate"></ol>
+    </div>
+    <div class="mini-board">
+      <p class="board-label">Most stable partnership <span class="board-note">pairs, by appearances</span></p>
+      <ol class="mini-list" id="lb-pairs"></ol>
+    </div>
+  </section>
+
+  <div class="table-toolbar">
+    <input type="search" id="player-search" class="search-input" placeholder="Search players by name…" aria-label="Search players by name">
+    <p class="search-count" id="search-count"></p>
+  </div>
+
   <div class="scroller">
     <table class="rt" id="players-table">
       <thead>
@@ -49,20 +73,59 @@
 (async function () {
   const tournaments = await loadTournaments();
   const players = playerStats(tournaments);
-  document.getElementById('players-body').innerHTML = players.map(p => {
-    const partners = [...new Set(p.entries.map(e => e.partner).filter(Boolean))];
-    return `<tr>
-      <td class="pair">${esc(p.name)}</td>
-      <td class="center num">${p.appearances}</td>
-      <td class="center num">${p.totalWins}</td>
-      <td class="center num">${Math.round(p.winRate * 100)}%</td>
-      <td class="center num">${ordinal(p.bestRank)}</td>
-      <td>${partners.map(esc).join(', ') || '—'}</td>
-    </tr>`;
-  }).join('');
+  const pairs = pairStats(tournaments);
+
+  function renderRows(list) {
+    document.getElementById('players-body').innerHTML = list.length ? list.map(p => {
+      const partners = [...new Set(p.entries.map(e => e.partner).filter(Boolean))];
+      return `<tr>
+        <td class="pair">${esc(p.name)}</td>
+        <td class="center num">${p.appearances}</td>
+        <td class="center num">${p.totalWins}</td>
+        <td class="center num">${Math.round(p.winRate * 100)}%</td>
+        <td class="center num">${ordinal(p.bestRank)}</td>
+        <td>${partners.map(esc).join(', ') || '—'}</td>
+      </tr>`;
+    }).join('') : `<tr><td colspan="6" style="text-align:center;color:var(--ink-3);padding:24px;">No players match "${esc(document.getElementById('player-search').value)}".</td></tr>`;
+  }
+
+  function renderCount(shown, total) {
+    document.getElementById('search-count').textContent =
+      shown === total ? `${total} players` : `${shown} of ${total} players`;
+  }
+
+  renderRows(players);
+  renderCount(players.length, players.length);
+
+  document.getElementById('player-search').addEventListener('input', (e) => {
+    const q = e.target.value.trim().toLowerCase();
+    const filtered = q ? players.filter(p => p.name.toLowerCase().includes(q)) : players;
+    renderRows(filtered);
+    renderCount(filtered.length, players.length);
+  });
+
+  // Leaderboards.
+  function mini(el, list, valueFn) {
+    document.getElementById(el).innerHTML = list.map((d, i) => `
+      <li>
+        <span class="mrank">${i + 1}</span>
+        <span class="mname">${esc(d.name)}</span>
+        <span class="mval">${valueFn(d)}</span>
+      </li>`).join('');
+  }
+
+  mini('lb-appearances', [...players].sort((a, b) => b.appearances - a.appearances).slice(0, 3),
+    d => `${d.appearances}`);
+  mini('lb-wins', [...players].sort((a, b) => b.totalWins - a.totalWins).slice(0, 3),
+    d => `${d.totalWins}`);
+  mini('lb-winrate', players.filter(p => p.appearances >= 5).sort((a, b) => b.winRate - a.winRate).slice(0, 3),
+    d => `${Math.round(d.winRate * 100)}%`);
+  mini('lb-pairs', pairs.slice(0, 3),
+    d => `${d.appearances}`);
 
   document.getElementById('footer').innerHTML =
-    `Computed automatically from <code>data/tournaments/*.json</code> — no manual player list to maintain.`;
+    `<p>Computed automatically from <code>data/tournaments/*.json</code> — no manual player list to maintain.</p>
+    <p class="credit">A portfolio project by Natalia Tykhonravova, built with Claude Code. See the <a href="case-study.html">case study</a> for the design and engineering decisions behind it.</p>`;
 })();
 </script>
 </body>

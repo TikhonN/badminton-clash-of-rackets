@@ -18,8 +18,8 @@ Then open the printed local URL.
 ## Adding a new tournament day
 
 1. Copy `data/tournaments/TEMPLATE.json` to a new file named after the tournament, e.g. `data/tournaments/2026-10-03.json`.
-2. Fill in `label`, `date`, `gamesPerPair`, `pointsCap`, and the `pairs` array (one entry per pair, with `wins` and, if you have it, `points`).
-3. If you have real per-round match scores this time, fill in the `rounds` array too (see the template's example) — the site doesn't use it yet, but it's there for when the match-log view is built.
+2. Fill in `label`, `date`, `gamesPerPair`, `pointsCap`, and the `pairs` array (one entry per pair, with `wins` and, if you have it, `points`). If the tournament ran as two simultaneous groups that never played each other, set each pair's `group` to `"A"` or `"B"` (and the tournament's own `groups` field to `["A","B"]`) — the site ranks each group independently rather than mixing them into one table.
+3. If you have real per-round match scores this time, fill in the `rounds` array too (see the template's example) — most tournaments now on the site do have this.
 4. Delete the file's `_comment`, `_rounds_comment`, and `_rounds_example` fields — those are just instructions.
 5. Add the new file's id to the `tournaments` array in `data/manifest.json`.
 6. Refresh the page. Standings, the points board, the players page, and the "pairs who played more than once" table all update automatically — nothing else to edit.
@@ -60,4 +60,6 @@ This is plain static HTML/CSS/JS — any static host works.
 
 ## Data honesty note
 
-Some tournament days only have totals (games won, points scored) because the original per-round scoresheets were handwritten with corrections that weren't reliably legible. Where that's the case, a tournament's `rounds` field is `null` and its `source` field says so. The totals themselves were cross-checked: each tournament's win counts sum exactly to the number of matches actually played, which confirms the transcription is accurate even without being able to read every individual match score.
+The results are real — 19 tournaments, 1,485 matches, played by a real club between May and September 2026 — but the **names are not**. This is a portfolio project, so every player name on the site is a fictional placeholder assigned to an anonymized player id from the club's own export; no name-to-id mapping exists linking these fictional names back to real people. See the case study for the full provenance.
+
+Every tournament currently on the site has full per-round match scores (the `rounds` field is populated, not `null`) — a tournament without real round-by-round data would still work, with `rounds: null` and a `source` note explaining why, same as the template documents. The totals were cross-checked against the club's own records: each tournament's win counts sum exactly to the number of matches actually played.

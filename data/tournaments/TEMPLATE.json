@@ -8,11 +8,14 @@
   "gamesPerPair": 11,
   "pointsCap": 18,
 
+  "_groups_comment": "Optional. Only set this if the tournament ran as two simultaneous, independent groups that never played each other (e.g. one set of courts vs. another, each with its own standings). List the group letters here, e.g. [\"A\",\"B\"], and give each pair below a matching \"group\" value. Leave both as null for a normal single-group tournament — the vast majority.",
+  "groups": null,
+
   "pairs": [
-    { "id": 1, "name": "Player One & Player Two", "wins": 0, "points": null }
+    { "id": 1, "name": "Player One & Player Two", "wins": 0, "points": null, "group": null }
   ],
 
-  "_rounds_comment": "Optional. If you have real per-round scores this time, fill in 'rounds' below and delete this field and the 'rounds': null line above it. Each match's team ids refer to a pair's 'id' above. If you don't have round data, leave 'rounds' as null — the site will just show tournament totals, same as August/September.",
+  "_rounds_comment": "Optional. If you have real per-round scores this time, fill in 'rounds' below and delete this field and the 'rounds': null line above it. Each match's team ids refer to a pair's 'id' above. If you don't have round data, leave 'rounds' as null — the site will just show tournament totals instead.",
   "rounds": null,
 
   "_rounds_example": [
